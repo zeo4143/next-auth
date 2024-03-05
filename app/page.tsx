@@ -32,6 +32,16 @@ export default function Home() {
           created a simple dashboard for the understanding how the
           auhtentication will work for both userrs and ADMIN After login
         </p>
+
+        <p className="text-white text-lg">
+         Right Now Credentials(email & password) work only for my email as we dont a domain to send email for different users
+        </p>
+
+        <p className="text-white text-lg">
+         Test Credentials for email & password:-
+         <p>heatblast4143@gmail.com</p>
+         <p>12345678</p>
+        </p>
         
       </div>
     </main>
