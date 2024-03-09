@@ -54,6 +54,7 @@ export const RegisterForm = () => {
       backButtonLabel="Already have an account? SignIn"
       backButtonHref="/auth/login"
       showSocial
+      isPending = {isPending}
     >
       <Form {...form}>
         <form 

@@ -8,7 +8,11 @@ import { useSearchParams } from "next/navigation";
 import { Button } from "@/components/ui/button";
 import { DEFAULT_LOGIN_REDIRECT } from "@/routes";
 
-export const Social = () => {
+interface socialProps {
+  disabled? : boolean
+}
+
+export const Social = ({disabled} : socialProps) => {
   const searchParams = useSearchParams();
   const callbackUrl = searchParams.get("callbackUrl");
 
@@ -24,6 +28,7 @@ export const Social = () => {
         size="lg"
         className="w-full"
         variant="outline"
+        disabled = {disabled}
         onClick={() => onClick("google")}
       >
         <FcGoogle className="h-5 w-5" />
@@ -32,6 +37,7 @@ export const Social = () => {
         size="lg"
         className="w-full"
         variant="outline"
+        disabled = {disabled}
         onClick={() => onClick("github")}
       >
         <FaGithub className="h-5 w-5" />

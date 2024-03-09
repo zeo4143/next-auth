@@ -74,6 +74,7 @@ export const LoginForm = () => {
       backButtonLabel="Don't have an account? Register"
       backButtonHref="/auth/register"
       showSocial
+      isPending= {isPending}
     >
       <Form {...form}>
         <form 
@@ -140,9 +141,9 @@ export const LoginForm = () => {
                         asChild
                         className="px-0 font-normal"
                       >
-                        <Link href="/auth/reset">
+                        { !isPending && <Link href="/auth/reset">
                           Forgot password?
-                        </Link>
+                        </Link>}
                       </Button>
                       <FormMessage />
                     </FormItem>
